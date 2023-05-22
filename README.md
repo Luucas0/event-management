@@ -20,7 +20,9 @@ Esta API permite gestionar eventos y proporciona endpoints para crear, obtener, 
 3. Asegúrate de reemplazar `<URL de conexión a MongoDB>` con la URL de tu base de datos MongoDB y `<Secreto para generar tokens JWT>` con una clave secreta para firmar los tokens JWT.
 
 PORT = 3001
+
 MONGO_URL = "mongodb+srv://HetmoTest:techTest@cluster0.faaknqx.mongodb.net/"
+
 SECRET = "HetmoInfoTest"
 
 ## Uso
