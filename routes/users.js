@@ -14,7 +14,7 @@ const {
 } = require("../controller/users");
 
 //Mostrar en consola a todos los usuarios.
-router.get("/allUsers", validateAuth, validateAdmin, allUsers);
+router.get("/allUsers", validateAuth, allUsers);
 
 //Recibir perfil de usuario logeado
 router.get("/me", validateAuth, loggedUser); //router.get("/me", validateAuth, loggedUser);

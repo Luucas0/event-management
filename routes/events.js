@@ -20,20 +20,22 @@ const {
 } = require("../controller/events");
 const { validateAuth, validateAdmin } = require("../middleware/validations");
 
-router.post("/createEvent", validateAuth, validateAdmin, createEvent)
-router.get("/events", getEvents)
+
+router.get("/events", validateAuth, getEvents)
 router.get("/monthlyEvents", getMonthlyEvents)
 router.get("/dailyEvents", getDailyEvents)
 router.get("/getEventById/:id", validateAuth, getEventsById)
 router.get("/publicEvents", validateAuth, getPublicEvents)
 router.get("/privateEvents", validateAuth, validateAdmin, getPrivateEvents)
 router.get("/myevents", validateAuth, getUserEvents)
-router.put("/unsubscribeEvent", validateAuth, unsubscribeEvent)
+router.get("/search/:search", searchEvent)
 
+router.post("/createEvent", validateAuth, validateAdmin, createEvent)
+
+router.put("/unsubscribeEvent", validateAuth, unsubscribeEvent)
 router.put("/eventPublic", validateAuth, validateAdmin, setPublicEvent)
 router.put("/updateEvent", validateAuth, validateAdmin, updateEvent)
 router.put("/assistEvent/:id", validateAuth, assistEvent)
-router.get("/search/:search", searchEvent)
 
 router.delete("/deleteAll", validateAuth, validateAdmin, deleteAll)
 module.exports = router;

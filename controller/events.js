@@ -42,6 +42,7 @@ const eventsManagement = {
     },
     getEventsById: async function(req,res){
         try{
+            if(!req.params.id)return res.status(404).send("Not found!")
             const events = await Event.findOne({_id: req.params.id})
             res.status(200).send(events)
         }
