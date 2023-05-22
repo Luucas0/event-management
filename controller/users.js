@@ -14,8 +14,8 @@ const usersManagement = {
         return res.status(400).send("Email already exists");
       }
       if (
-        req.body.password.charAt(0) ===
-        req.body.password.charAt(0).toLowerCase()
+        data.password.charAt(0) ===
+        data.password.charAt(0).toLowerCase()
       ) {
         return res.status(400).send("First letter have to upper case.");
       }
@@ -24,11 +24,11 @@ const usersManagement = {
         return /\d/.test(str);
       }
 
-      if (!containsNumber(req.body.password)) {
+      if (!containsNumber(data.password)) {
         return res.status(400).send("The password need 1 number.");
       }
 
-      const user = req.body;
+      const user = req.body
       const newUser = new User({
         fullName: user.fullName,
         password: user.password,
