@@ -32,7 +32,7 @@ SECRET = "HetmoInfoTest"
 
 ## Credenciales
 
-# 1. Para logearte como administrador, realiza una petición al "Body" con la siguiente información.
+### 1. Para logearte como administrador, realiza una petición al "Body" con la siguiente información.
 ```
 {
   "fullName": "Admin",
@@ -42,7 +42,7 @@ SECRET = "HetmoInfoTest"
 }
 ```
 
-# 2. Para logearte como usuario, realiza una petición al "Body" con la siguiente información.
+### 2. Para logearte como usuario, realiza una petición al "Body" con la siguiente información.
 ```
 {
   "fullName": "Mariano Lopez",
@@ -51,7 +51,7 @@ SECRET = "HetmoInfoTest"
   "phone": "+2446374324234"
 }
 ```
-# 3. Si quieres crear un evento, sigue el siguiente formato.
+### 3. Si quieres crear un evento, sigue el siguiente formato.
 ```
 {
   "title": "¡IT Webinar",
