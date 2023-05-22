@@ -30,6 +30,43 @@ SECRET = "HetmoInfoTest"
 1. Inicia el servidor ejecutando el siguiente comando: `nodemon server.js`.
 2. La API estará disponible en `http://localhost:3001`.
 
+## Credenciales
+
+1. Para logearte como administrador, realiza una petición al "Body" con la siguiente información.
+
+{
+  "fullName": "Admin",
+  "password": "Admin123456",
+  "email": "admin@admin.admin",
+  "phone": "+2446374"
+}
+
+2. Para logearte como usuario, realiza una petición al "Body" con la siguiente información.
+
+{
+  "fullName": "Mariano Lopez",
+  "password": "User123456",
+  "email": "user@user.user",
+  "phone": "+2446374324234"
+}
+
+3. Si quieres crear un evento, sigue el siguiente formato.
+
+{
+  "title": "¡IT Webinar",
+  "shortDescription": "Cononoce mejor a una empresa lider en el ámbito IT.",
+  "description": "Hetmo Informática asistirá al evento a dar una charla sobre la importancia de un código limpio y bien estructurado. Durante el evento se realizarán varios sorteos e incluso tendrán un certificado de asistencia ¡No te lo pierdas!",
+  "date": {
+    "day": "18",
+    "month": "07",
+    "year": "2023"
+  },
+  "organizer": "CEO de Hetmo Informática",
+  "location": "Google Meet"
+}
+
+
+
 ## Contribución
 
 Si deseas contribuir a este proyecto, por favor sigue los siguientes pasos:

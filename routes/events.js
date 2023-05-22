@@ -21,7 +21,7 @@ const {
 const { validateAuth, validateAdmin } = require("../middleware/validations");
 
 
-router.get("/events", validateAuth, getEvents)
+router.get("/getAll", validateAuth, getEvents)
 router.get("/monthlyEvents", getMonthlyEvents)
 router.get("/dailyEvents", getDailyEvents)
 router.get("/getEventById/:id", validateAuth, getEventsById)
@@ -34,7 +34,7 @@ router.post("/createEvent", validateAuth, validateAdmin, createEvent)
 
 router.put("/unsubscribeEvent", validateAuth, unsubscribeEvent)
 router.put("/eventPublic", validateAuth, validateAdmin, setPublicEvent)
-router.put("/updateEvent", validateAuth, validateAdmin, updateEvent)
+router.put("/updateEvent/:id", validateAuth, validateAdmin, updateEvent)
 router.put("/assistEvent/:id", validateAuth, assistEvent)
 
 router.delete("/deleteAll", validateAuth, validateAdmin, deleteAll)

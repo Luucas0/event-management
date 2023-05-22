@@ -124,9 +124,10 @@ const eventsManagement = {
     updateEvent: async function(req,res){
         try{
         const data = req.body
-        if(!data.id) return "Ingrese un ID."
+        if(!req.params.id) return res.status(200).send("Ingrese un ID!")
+        console.log(bodyValidation(data))
         if(bodyValidation(data) === true){
-        const event = await Event.updateOne({_id: data.id}, {
+        const event = await Event.updateOne({_id: req.params.id}, {
             title: data.title,
             shortDescription: data.shortDescription,
             description: data.description,

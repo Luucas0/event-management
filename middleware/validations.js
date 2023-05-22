@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 
 
 const validations = {
-    bodyValidation: async function(data){
+    bodyValidation: function(data){
 
         const requiredFields = ['title', 'shortDescription', 'description', 'date', 'organizer', 'location'];
         const missingFields = requiredFields.filter(field => !data[field]);
