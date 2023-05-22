@@ -33,25 +33,26 @@ SECRET = "HetmoInfoTest"
 ## Credenciales
 
 1. Para logearte como administrador, realiza una petición al "Body" con la siguiente información.
-
+```
 {
   "fullName": "Admin",
   "password": "Admin123456",
   "email": "admin@admin.admin",
   "phone": "+2446374"
 }
+```
 
 2. Para logearte como usuario, realiza una petición al "Body" con la siguiente información.
-
+```
 {
   "fullName": "Mariano Lopez",
   "password": "User123456",
   "email": "user@user.user",
   "phone": "+2446374324234"
 }
-
+```
 3. Si quieres crear un evento, sigue el siguiente formato.
-
+```
 {
   "title": "¡IT Webinar",
   "shortDescription": "Cononoce mejor a una empresa lider en el ámbito IT.",
@@ -64,8 +65,7 @@ SECRET = "HetmoInfoTest"
   "organizer": "CEO de Hetmo Informática",
   "location": "Google Meet"
 }
-
-
+```
 
 ## Contribución
 
