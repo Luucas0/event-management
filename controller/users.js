@@ -68,7 +68,7 @@ const usersManagement = {
         phone: user.phone,
         role: user.role,
         events: user.events,
-        createdAt: user.dni,
+        createdAt: user.createdAt,
       };
   
       const token = generateToken(payload);
@@ -147,7 +147,7 @@ const usersManagement = {
           _id: req.params.id,
         },
         {
-          role: "administrator",
+          role: "admin",
         }
       );
       res.send(200).status(user);
