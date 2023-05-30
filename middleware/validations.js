@@ -8,6 +8,7 @@ const validations = {
         const requiredFields = ['title', 'shortDescription', 'description', 'date', 'organizer', 'location'];
         const missingFields = requiredFields.filter(field => !data[field]);
     
+
     if (missingFields.length > 0) return false
     else return true
     },

@@ -7,7 +7,7 @@ const eventsManagement = {
         try{
             const data = req.body
             const date = new Date()
-        if(await bodyValidation(data) === true){
+        if(bodyValidation(data) === true){
             const newEvent = new Event({
                 title: data.title,
                 shortDescription: data.shortDescription,
